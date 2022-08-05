@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+  background-color: #FDD8DA;
+}
+
+input {
+  border: 0px;
+}
+
+.jumbotron {
+  font-family: 'Fredoka One', cursive;
+  height: max-content;
+  text-align: center;
+  background: none;
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.jumbotron h1 {
+  text-transform: uppercase;
+  color: #000000;
+  text-shadow: 2px 2px #FBA8AC;
+  font-weight: 500;
+  animation: text-shadow .75s linear infinite;
+}
+
+.jumbotron a {
+    color: #F3F9F9;
+    font-weight: 500;
+}
+
+hr {
+  background-color: #000000;
+  box-shadow: 1px 1px #FBA8AC, 2px 2px #FBA8AC;
+}
+
+li a {
+  color: #1CB5B5;  
+  font-weight: 600;
+}
+
+li a:hover {
+  color: #FDD8DA;
+  text-shadow: 1px 1px #1CB5B5, -1px -1px #1CB5B5, 0px 1px #1CB5B5, 1px 0px #1CB5B5, 0px -1px #1CB5B5, -1px 0px #1CB5B5, 1px -1px #1CB5B5,  -1px 1px #1CB5B5;
+}
+
+.container {
+  height: fit-content;
+  width: fit-content;
+  min-width: 500px;
+  padding: 40px;
+  background-color: #FEF5F6;
+  border-radius: 10px;
+  transform: translateY(-25px);
+  animation: box-shadow 0.75s linear infinite;
+}
+
+.container h3 {
+  font-family: 'Fredoka One', cursive;
+  text-transform: uppercase;
+  color: #000000;
+  text-shadow: 2px 2px #FBA8AC;
+}
+
+.centerBtn {
+  text-align: center;
+}
+
+.rightBtn {
+  text-align: right;
+}
+
+.htmlButton {
+  background-color: #58C3C3;
+  border-radius: 4px;
+  margin: 4px;
+  padding: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: max-content;
+  text-align: center;
+  text-transform: uppercase;
+  color: #F3F9F9;
+  font-weight: 700;
+  box-shadow: 2px 5px #FBA8AC;
+}
+
+.htmlButton:hover {
+  color: #FDD8DA;
+  text-decoration: none;
+}
+
+.htmlButton:active {
+  box-shadow: 2px 2px #FBA8AC;
+  transform: perspective(90%) translateZ(-1em);
+}
+
+#logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+label {
+  color: #000000;
+  font-weight: 600;
+}
+
+#header a, a:hover, a:focus, a:active {
+	text-decoration: none;
+	color: inherit;
+}
+
+.textBox {
+  background-color: #F3F9F9;
+  color: #c06e72;
+}
+
+.textBox:focus {
+  outline: solid 2px #87D4D4;
+  border-radius: 5px;
+  color: #c06e72;
+}
+
+.textBox:-webkit-autofill,
+.textBox:-webkit-autofill:hover, 
+.textBox:-webkit-autofill:focus, 
+.textBox:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #F3F9F9 inset !important;
+    color: inherit;
+}
+
+#indexBtn {
+  transform: translateY(-40px);
+}
+
+h6 {
+  font-family: 'Fredoka One', cursive;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+h6 a {
+  color: #1CB5B5;  
+  font-weight: 400;
+  text-shadow: none;
+}
+
+h6 a:hover {
+  color: #FDD8DA;
+  text-shadow: 1px 1px #1CB5B5, -1px -1px #1CB5B5, 0px 1px #1CB5B5, 1px 0px #1CB5B5, 0px -1px #1CB5B5, -1px 0px #1CB5B5, 1px -1px #1CB5B5,  -1px 1px #1CB5B5;
+}
