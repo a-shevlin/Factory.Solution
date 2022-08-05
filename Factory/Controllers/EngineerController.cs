@@ -51,7 +51,7 @@ namespace Factory.Controllers
     {
       var thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.Id == id);
       ViewBag.PageTitle = ("Edit " + thisEngineer.Name);
-      ViewBag.Header = ("Engineer " + thisEngineer.Name + " Edit");
+      ViewBag.Header = ("Edit " + "Engineer " + thisEngineer.Name);
       return View(thisEngineer);
     }
 
