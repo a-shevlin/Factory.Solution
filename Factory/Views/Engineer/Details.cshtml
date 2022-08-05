@@ -1,0 +1,30 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Factory.Models;
+@model Factory.Models.Engineer;
+
+@if(Model.JoinEntities.Count == 0)
+{
+  <h6>@Model.Name is not licensed for any machines.</h6> 
+}
+else
+{
+  <h6>Currently Licensed for @Model.JoinEntities.Count Machines</h6>
+  <ul>
+    @foreach(var join in Model.JoinEntities)
+    {
+      <li>@Html.ActionLink($"{join.Machine.Model}", "Details", "Machine", new { id = join.Machine.Id})</li>
+    }
+  </ul>
+}
+<br>
+<br>
+<p>Contact Information: </p>
+<p>Date Hired: @Model.DateHired.ToShortDateString()</p>
+<br>
+<div class="rightBtn">
+  @Html.ActionLink("Add License", "AddMachine", "Engineer", new{ id = Model.Id}, new { @class="htmlButton"}) 
+  @Html.ActionLink("Delete " + $"{Model.Name}", "Delete", "Engineer", new { id = Model.Id }, new { @class="htmlButton"})
+</div>
