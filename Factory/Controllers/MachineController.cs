@@ -23,5 +23,61 @@ namespace Factory.Controllers
       List<Machine> model = _db.Machines.ToList();
       return View(model);
     }
+
+    public ActionResult Create()
+    {
+      ViewBag.PageTitle = ("Add Machine");
+      ViewBag.Header = ("Add Machine");
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult Create(Machine machine)
+    {
+      _db.Machines.Add(machine);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    public ActionResult Details(int id)
+    {
+      Engineer thisMachine = _db.Machines.FirstOrDefault(machine => machine.Id == id);
+      ViewBag.PageTitle = (thisMachine.Name + " Details");
+      ViewBag.Header = ("Engineer " + thisMachine.Name + " Details");
+      return View(thisMachine);
+    }
+
+    public ActionResult Edit(int id)
+    {
+      var thisMachine = _db.Machines.FirstOrDefault(machine => machine.Id == id);
+      ViewBag.PageTitle = ("Edit " + thisMachine.Name);
+      ViewBag.Header = ("Edit " + "Machine " + thisMachine.Name);
+      return View(thisMachine);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Machine machine)
+    {
+      _db.Entry(machine).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    public ActionResult Delete(int id)
+    {
+      var thisMachine = _db.Machines.FirstOrDefault(machine => machine.Id == id);
+      ViewBag.PageTitle = ("Delete " + thisMachine.Name);
+      ViewBag.Header = ("Delete " + "Machine " + thisMachine.Name);
+      return View(thisMachine);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public ActionResult DeleteConfirmed(int id)
+    {
+      var thisMachine = _db.Machines.FirstOrDefault(machine => machine.Id == id);
+      _db.Machines.Remove(thisMachine);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
