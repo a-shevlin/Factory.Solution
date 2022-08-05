@@ -10,7 +10,7 @@
   @Html.Label("Engineer Name")<span>  :  </span>
   @Html.TextBoxFor(model => model.Name, new {required = "required", @class="textBox" })
   <br>
-  @Html.Label("Date: ")
+  @Html.Label("Date")<span>  :  </span>
   @Html.TextBoxFor(model => model.DateHired, new { @type="date"});
   <br>
   <input type="submit" value="Add new Engineer" class="htmlButton"/>
