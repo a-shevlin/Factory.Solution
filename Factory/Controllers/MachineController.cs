@@ -43,7 +43,7 @@ namespace Factory.Controllers
     {
       Machine thisMachine = _db.Machines.FirstOrDefault(machine => machine.Id == id);
       ViewBag.PageTitle = (thisMachine.Model + " Details");
-      ViewBag.Header = ("Engineer " + thisMachine.Model + " Details");
+      ViewBag.Header = ("The " + thisMachine.Model + " Machine");
       return View(thisMachine);
     }
 
