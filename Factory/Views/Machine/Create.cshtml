@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Factory.Models;
+@model Factory.Models.Engineer;
+
+@using (Html.BeginForm())
+{
+  @Html.Label("Machine Model")<span>  :  </span>
+  @Html.TextBoxFor(model => model.Model, new {required = "required", @class="textBox" })
+  <br>
+  @Html.Label("Manufacture Date")<span>  :  </span>
+  @Html.TextBoxFor(model => model.DateManufactured, new { @type="date"});
+  <br>
+  <input type="submit" value="Add new Machine" class="htmlButton"/>
+}
+<hr>
