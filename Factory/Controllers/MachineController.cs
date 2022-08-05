@@ -41,17 +41,17 @@ namespace Factory.Controllers
 
     public ActionResult Details(int id)
     {
-      Engineer thisMachine = _db.Machines.FirstOrDefault(machine => machine.Id == id);
-      ViewBag.PageTitle = (thisMachine.Name + " Details");
-      ViewBag.Header = ("Engineer " + thisMachine.Name + " Details");
+      Machine thisMachine = _db.Machines.FirstOrDefault(machine => machine.Id == id);
+      ViewBag.PageTitle = (thisMachine.Model + " Details");
+      ViewBag.Header = ("Engineer " + thisMachine.Model + " Details");
       return View(thisMachine);
     }
 
     public ActionResult Edit(int id)
     {
       var thisMachine = _db.Machines.FirstOrDefault(machine => machine.Id == id);
-      ViewBag.PageTitle = ("Edit " + thisMachine.Name);
-      ViewBag.Header = ("Edit " + "Machine " + thisMachine.Name);
+      ViewBag.PageTitle = ("Edit " + thisMachine.Model);
+      ViewBag.Header = ("Edit " + "Machine " + thisMachine.Model);
       return View(thisMachine);
     }
 
@@ -66,8 +66,8 @@ namespace Factory.Controllers
     public ActionResult Delete(int id)
     {
       var thisMachine = _db.Machines.FirstOrDefault(machine => machine.Id == id);
-      ViewBag.PageTitle = ("Delete " + thisMachine.Name);
-      ViewBag.Header = ("Delete " + "Machine " + thisMachine.Name);
+      ViewBag.PageTitle = ("Delete " + thisMachine.Model);
+      ViewBag.Header = ("Delete " + "Machine " + thisMachine.Model);
       return View(thisMachine);
     }
 
