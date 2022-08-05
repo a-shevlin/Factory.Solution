@@ -24,7 +24,8 @@ else
 <p>Contact Information: </p>
 <p>Date Hired: @Model.DateHired.ToShortDateString()</p>
 <br>
-<div class="rightBtn">
+<div class="centerBtn">
   @Html.ActionLink("Add License", "AddMachine", "Engineer", new{ id = Model.Id}, new { @class="htmlButton"}) 
+  @Html.ActionLink("Edit " + $"{Model.Name}", "Edit", "Engineer", new { id = Model.Id }, new { @class="htmlButton"})
   @Html.ActionLink("Delete " + $"{Model.Name}", "Delete", "Engineer", new { id = Model.Id }, new { @class="htmlButton"})
 </div>
