@@ -3,11 +3,11 @@
 }
 
 @using Factory.Models;
-@model Factory.Models.Engineer;
+@model Factory.Models.Machine;
 
 @using (Html.BeginForm())
 {
-  @Html.Label("Machine Model")<span>  :  </span>
+  @Html.Label("Model Name")<span>  :  </span>
   @Html.TextBoxFor(model => model.Model, new {required = "required", @class="textBox" })
   <br>
   @Html.Label("Manufacture Date")<span>  :  </span>
