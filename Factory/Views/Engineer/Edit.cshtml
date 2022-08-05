@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.Id)
+  @Html.Label("Name")<span>  :  </span>
+  @Html.EditorFor(model => model.Name)
+  @Html.Label("Date Hired")<span>  :  </span>
+  @Html.EditorFor(model => model.DateHired)
+
+  <input type="submit" value="Save" class="htmlButton"/>
+}
+<br>
+<br>
+
+<div class="rightBtn">
+  @Html.ActionLink("Back to " + @Model.Name, "Details", "Engineer", new { id = Model.Id }, new { @class="htmlButton" })
+</div>
