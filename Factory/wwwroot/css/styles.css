@@ -22,12 +22,28 @@ input {
   color: #000000;
   text-shadow: 2px 2px #FBA8AC;
   font-weight: 500;
-  animation: text-shadow .75s linear infinite;
+  animation: text-shadow .5s linear infinite;
 }
 
 .jumbotron a {
     color: #F3F9F9;
     font-weight: 500;
+}
+
+@keyframes text-shadow {
+  from, 24.9% {
+    text-shadow:1px 2px #ffbbbf, 3px 5px #FBA8AC, 5px 8px #fd868e,  7px 11px #f16f78;
+  }
+  25%, 49.9%
+  {
+    text-shadow:1px 2px #f16f78, 3px 5px #ffbbbf, 5px 8px #FBA8AC,  7px 11px #fd868e;
+  }
+  50%, 74.9% {
+    text-shadow:1px 2px #fd868e, 3px 5px #f16f78, 5px 8px #ffbbbf,  7px 11px #FBA8AC;
+  }
+  75%, to {
+    text-shadow:1px 2px #FBA8AC, 3px 5px #fd868e, 5px 8px #f16f78,  7px 11px #ffbbbf;
+  }
 }
 
 hr {
@@ -53,7 +69,7 @@ li a:hover {
   background-color: #FEF5F6;
   border-radius: 10px;
   transform: translateY(-25px);
-  animation: box-shadow 0.75s linear infinite;
+  animation: box-shadow 0.5s linear infinite;
 }
 
 .container h3 {
@@ -61,6 +77,22 @@ li a:hover {
   text-transform: uppercase;
   color: #000000;
   text-shadow: 2px 2px #FBA8AC;
+}
+
+@keyframes box-shadow {
+  from, 24.9% {
+    box-shadow:2px 4px #ffbbbf, 6px 10px #FBA8AC, 10px 16px #fd868e,  14px 22px #f16f78;
+  }
+  25%, 49.9%
+  {
+    box-shadow:2px 4px #f16f78, 6px 10px #ffbbbf, 10px 16px #FBA8AC,  14px 22px #fd868e;
+  }
+  50%, 74.9% {
+    box-shadow:2px 4px #fd868e, 6px 10px #f16f78, 10px 16px #ffbbbf,  14px 22px #FBA8AC;
+  }
+  75%, to {
+    box-shadow:2px 4px #FBA8AC, 6px 10px #fd868e, 10px 16px #f16f78,  14px 22px #ffbbbf;
+  }
 }
 
 .centerBtn {
@@ -128,6 +160,7 @@ label {
 .textBox:-webkit-autofill:focus, 
 .textBox:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px #F3F9F9 inset !important;
+    box-shadow: 0 0 0 30px #F3F9F9 inset !important;
     color: inherit;
 }
 
