@@ -25,7 +25,7 @@ else
 <hr>
 <br>
 <div class="centerBtn">
-  @Html.ActionLink("Add License", "AddMachine", "Engineer", new{ id = Model.Id}, new { @class="htmlButton"}) 
+  @Html.ActionLink("Add License", "AddEngineer", "Machine", new{ id = Model.Id}, new { @class="htmlButton"}) 
   @Html.ActionLink("Edit " + $"{Model.Model}", "Edit", "Machine", new { id = Model.Id }, new { @class="htmlButton"})
   @Html.ActionLink("Delete " + $"{Model.Model}", "Delete", "Machine", new { id = Model.Id }, new { @class="htmlButton"})
 </div>
