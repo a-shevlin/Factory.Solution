@@ -1,0 +1,20 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.Id)
+
+  @Html.Label("Engineer Receiving License")<span>  :  </span>
+  @Html.DropDownList("EngineerId")
+
+  <input type="submit" value="Save" class="htmlButton" />
+}
+
+<hr/>
+<div class="rightBtn">
+  @Html.ActionLink("Back to " + @Model.Model, "Details", "Machine", new { id = @Model.Id}, new { @class="htmlButton" })
+</div>
