@@ -22,7 +22,7 @@ input {
   color: #000000;
   text-shadow: 2px 2px #FBA8AC;
   font-weight: 500;
-  animation: text-shadow .5s linear infinite;
+  animation: text-shadow 1.25s linear infinite;
 }
 
 .jumbotron a {
@@ -69,7 +69,7 @@ li a:hover {
   background-color: #FEF5F6;
   border-radius: 10px;
   transform: translateY(-25px);
-  animation: box-shadow 0.5s linear infinite;
+  animation: box-shadow 1.25s linear infinite;
 }
 
 .container h3 {
