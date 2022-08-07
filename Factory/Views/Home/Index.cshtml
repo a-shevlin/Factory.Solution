@@ -1,3 +1,41 @@
 @{
   Layout = "_Layout";
 }
+
+@using Factory.Models
+
+<div class="row">
+  <div class="col-6">
+    @if(ViewBag.AllEngineers.Count == 0)
+    {
+      <h4 style="text-align: center;">Please add an engineer.</h4>
+    }
+    else
+    {
+
+    <h4 style="text-align: center;">All Engineers</h4>
+    <ul>
+    @foreach (Engineer engineer in ViewBag.AllEngineers)
+    {
+      <li>@Html.ActionLink($"{engineer.Name}", "Details", "Engineer", new { id = engineer.Id })</li>
+    }
+    </ul>
+    }
+  </div>
+  <div class="col-6" >
+    @if(ViewBag.AllMachines.Count == 0)
+    {
+      <h4 style="text-align: center;">Please add a machine.</h4>
+    }
+    else
+    {
+    <h4 style="text-align: center;">All Machines</h4>      
+    <ul>
+    @foreach (Machine machine in ViewBag.AllMachines)
+    {
+      <li>@Html.ActionLink($"{machine.Model}", "Details", "Machine", new { id = machine.Id })</li>
+    }
+    </ul>
+    }
+  </div>
+</div>
