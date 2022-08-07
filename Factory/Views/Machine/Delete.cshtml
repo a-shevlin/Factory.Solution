@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine;
+
+<h4>Are you sure you want to delete @Model.Model?</h4>
+  @using (Html.BeginForm())
+  {
+    <div class="centerBtn">
+      <input type="submit" value="Delete" class="htmlButton"/>
+    </div>
+  }
+<hr/>
