@@ -80,6 +80,15 @@ namespace Factory.Controllers
       return RedirectToAction("Index");
     }
 
+    [HttpPost]
+    public ActionResult DeleteEngineer(int joinId)
+    {
+      var joinEntry = _db.EngineerMachine.FirstOrDefault(entry => entry.Id == joinId);
+      _db.EngineerMachine.Remove(joinEntry);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
     public ActionResult AddEngineer(int id)
     {
       var thisMachine = _db.Machines.FirstOrDefault(Machine => Machine.Id == id);
