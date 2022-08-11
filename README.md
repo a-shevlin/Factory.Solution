@@ -1,4 +1,4 @@
-# Dr Sillystringz's Factoru
+# Dr Sillystringz's Factory
 
 #### By _**Alex Shevlin**_ 
 
